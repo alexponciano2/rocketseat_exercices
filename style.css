@@ -1,10 +1,10 @@
 /* Global ===================== */
-
 :root {
     --dark-blue: #363f5f;
-    --green: #49aa26;
+    --green: #49AA26;
     --light-green: #3dd705;
     --red: #e92929;
+
 }
 
 * {
@@ -14,7 +14,7 @@
 }
 
 html {
-    font-size: 93.75%;
+    font-size: 93.75%; /* 15px */
 }
 
 body {
@@ -22,14 +22,14 @@ body {
     font-family:'Poppins', sans-serif
 }
 
-.sr-only{
+.sr-only {
     position: absolute;
     width: 1px;
     height: 1px;
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: (0,0,0,0);
+    clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border-width: 0;
 }
@@ -49,7 +49,6 @@ h2 {
 }
 
 /* Links & Buttons ===================== */
-
 a {
     color: var(--green);
     text-decoration: none;
@@ -102,7 +101,6 @@ button:hover {
     opacity: 1;
 }
 
-
 /* Header ===================== */
 header {
     background: #2D4A22;
@@ -148,12 +146,12 @@ header {
 .card p {
     font-size: 2rem;
     line-height: 3rem;
-
+    white-space:nowrap;
     margin-top: 1rem;
 }
 
 .card.total {
-    background: #49AA26;
+    background: var(--green);
     color: white;
 }
 
@@ -170,15 +168,15 @@ header {
 }
 
 table thead tr th:first-child, 
-table tbody tr td:first-child {
+table tbody tr td:first-child
+{
     border-radius: 0.25rem 0 0 0.25rem;
 }
 
 table thead tr th:last-child, 
-table tbody tr td:last-child {
+table tbody tr td:last-child{
     border-radius: 0 0.25rem 0.25rem 0;
 }
-
 
 table thead th {
     background: white;
@@ -211,11 +209,11 @@ td.income {
 }
 
 td.expense {
-    color: var(--red);
+    color: #e92929;
 }
 
 /* Modal ===================== */
-.modal-overlay{
+.modal-overlay {
     width: 100%;
     height: 100%;
 
@@ -224,7 +222,7 @@ td.expense {
     position: fixed;
     top: 0;
 
-    display: flex;
+    display:flex;
     align-items: center;
     justify-content: center;
 
@@ -240,15 +238,15 @@ td.expense {
 }
 
 .modal {
-    background: #F0F2F5;
+    background: #F0F2f5;
     padding: 2.4rem;
 
     position: relative;
     z-index: 1;
 }
 
-/* Form ===================== */
 
+/* Form ===================== */
 #form {
     max-width: 500px;
 }
@@ -270,7 +268,7 @@ input {
     margin-top: 0.8rem;
 }
 
-.input-group small {
+.input-group .help{
     opacity: 0.4;
 }
 
@@ -295,16 +293,16 @@ footer {
     opacity: 0.6;
 }
 
-/* Responsividade ===================== */
 
-@media (min-width: 800px){
-    html{
+/* Responsive ===================== */
+@media (min-width: 800px) {
+    html {
         font-size: 87.5%;
     }
 
     #balance {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
-    }    
+    }
 }
